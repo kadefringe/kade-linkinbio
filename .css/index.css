@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
 .test {
     color: #333;
     margin: 30px 0 0 30px;
