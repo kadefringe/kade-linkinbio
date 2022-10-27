@@ -1,10 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Pretendard Variable';
 }
 
 .test {
-    color: #333;
-    margin: 30px 0 0 30px;
+    color: #ccc;
+    padding: min(30px, 3vw);
+}
+
+.test h1 {
+    text-align: center;
+    font-size: min(120px, 15vw);
+    line-break: auto;
 }
