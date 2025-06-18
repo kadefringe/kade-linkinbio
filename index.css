@@ -1,32 +1,56 @@
 :root {
-  --hover-bg: rgba(0, 0, 0, 0.05);
+  --link-hue: 200;
+  --link-saturation: 100%;
+  --link-lightness: 50%;
+  --link-hue-hover: var(--link-hue);
+  --link-saturation-hover: var(--link-saturation);
+  --link-lightness-hover: calc(var(--link-lightness) + 15%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --hover-bg: rgba(255, 255, 255, 0.1);
-  }
-}
-
-.link {
-  text-decoration: underline;
-  padding: 0.2em 0.3em;
-  border-radius: 0.25em;
+a {
+  color: hsl(var(--link-hue), var(--link-saturation), var(--link-lightness));
+  text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
-.link:hover, .link:focus-visible {
-  background-color: var(--hover-bg);
+a:hover, a:focus-visible {
+  color: hsl(
+    var(--link-hue-hover),
+    var(--link-saturation-hover),
+    var(--link-lightness-hover)
+    );
 }
 
-.link.color-bsky {
-  color: #1185fe;
+.color-twitter {
+  --link-hue: 203;
+  --link-saturation: 89.32%;
+  --link-lightness: 53.2%;
 }
 
-.link.color-mstdn {
-  color: #08a6b7;
+.color-bsky {
+  --link-hue: 211;
+  --link-saturation: 100%;
+  --link-lightness: 53.5%;
 }
 
-.link.color-github {
-  color: #fff;
+.color-mstdn {
+  --link-hue: 185.83;
+  --link-saturation: 91.62%;
+  --link-lightness: 37.45%;
+}
+
+.color-github {
+  --link-hue: 0;
+  --link-saturation: 100%;
+  --link-saturation-hover: 85%;
+  --link-lightness: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  .color-github {
+    --link-hue: 0;
+    --link-saturation: 0%;
+    --link-lightness: 0%;
+    --link-lightness-hover: 30%;
+  }
 }
