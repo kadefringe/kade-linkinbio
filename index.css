@@ -2,18 +2,22 @@
   --link-hue: 200;
   --link-saturation: 100%;
   --link-lightness: 50%;
+}
+
+a, a:hover, a:focus-visible {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link {
   --link-hue-hover: var(--link-hue);
   --link-saturation-hover: var(--link-saturation);
   --link-lightness-hover: calc(var(--link-lightness) + 15%);
-}
-
-a {
   color: hsl(var(--link-hue), var(--link-saturation), var(--link-lightness));
-  text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
-a:hover, a:focus-visible {
+.link:hover, .link:focus-visible {
   color: hsl(
     var(--link-hue-hover),
     var(--link-saturation-hover),
@@ -41,9 +45,9 @@ a:hover, a:focus-visible {
 
 .color-github {
   --link-hue: 0;
-  --link-saturation: 100%;
-  --link-saturation-hover: 85%;
+  --link-saturation: 0%;
   --link-lightness: 100%;
+  --link-lightness-hover: 80%;
 }
 
 @media (prefers-color-scheme: light) {
@@ -53,4 +57,31 @@ a:hover, a:focus-visible {
     --link-lightness: 0%;
     --link-lightness-hover: 30%;
   }
+}
+
+.color-hatena {
+  --link-hue: 240
+  --link-saturation: 11.11%;
+  --link-lightness: 8.82%;
+}
+
+.color-chihaya {
+  --link-hue: 230;
+  --link-saturation: 69%;
+  --link-lightness: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .color-hatena {
+    --link-hue: 0;
+    --link-saturation: 0%;
+    --link-lightness: 100%;
+    --link-lightness-hover: 80%;
+  }
+}
+
+.color-oracle {
+  --link-hue: 0;
+  --link-saturation: 100%;
+  --link-lightness: 48.63%;
 }
